@@ -57,6 +57,10 @@ document.querySelectorAll('[data-register]').forEach(b=>b.addEventListener('clic
 document.querySelector('.profile-close').addEventListener('click',()=>document.querySelector('#profile-modal').close());
 document.querySelector('#profile-form').addEventListener('submit',e=>{e.preventDefault();document.querySelector('#profile-modal').close();toast('Profile saved. School remains optional.')});
 document.querySelector('[data-enter-employer]').addEventListener('click',()=>{enterCranford();setTimeout(()=>showView('employer'),0)});
+document.querySelector('[data-audience-chooser]').addEventListener('click',()=>document.querySelector('#audience-modal').showModal());
+document.querySelector('.audience-close').addEventListener('click',()=>document.querySelector('#audience-modal').close());
+document.querySelector('[data-audience-student]').addEventListener('click',()=>{document.querySelector('#audience-modal').close();document.querySelector('#profile-modal').showModal()});
+document.querySelector('[data-audience-employer]').addEventListener('click',()=>{document.querySelector('#audience-modal').close();enterCranford();setTimeout(()=>showView('employer'),0)});
 window.addEventListener('hashchange',route);
 
 renderJobs();route();

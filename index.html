@@ -13,7 +13,7 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#/" id="brand-home" aria-label="Platform home"><span class="brand-mark">L</span><span>LocalLaunch <small>working name</small></span></a>
-    <nav id="platform-nav" aria-label="Platform navigation"><button class="plain-nav" data-register>For students</button><button class="plain-nav" data-enter-employer>For employers</button><button class="header-cta" data-register>Get started</button></nav>
+    <nav id="platform-nav" aria-label="Platform navigation"><button class="plain-nav" data-register>For students</button><button class="plain-nav" data-enter-employer>For employers</button><button class="header-cta mobile-start" data-audience-chooser>Get started</button></nav>
     <nav id="market-nav" class="hidden" aria-label="Marketplace navigation"><button class="nav-link active" data-view="jobs">Find jobs</button><button class="nav-link" data-view="applications">My applications</button><button class="nav-link" data-view="employer">For employers</button></nav>
     <button class="avatar hidden" aria-label="Open profile">JR</button>
   </header>
@@ -144,6 +144,7 @@
     <div id="modal-content"></div>
   </dialog>
 
+  <dialog id="audience-modal" class="audience-modal"><button class="audience-close modal-close" aria-label="Close">×</button><p class="eyebrow">Get started</p><h2>How will you use LocalLaunch?</h2><div class="audience-options"><button type="button" data-audience-student><span>Student</span><small>Find and save local jobs</small></button><button type="button" data-audience-employer><span>Employer</span><small>Post a student-ready job</small></button></div></dialog>
   <dialog id="profile-modal" class="profile-modal"><button class="profile-close modal-close" aria-label="Close">×</button><p class="eyebrow">Student profile · prototype</p><h2>Tell us what works for you.</h2><p>School is optional and never controls which local jobs you can see.</p><form id="profile-form" class="profile-form"><label>Age<select required><option value="">Choose age</option><option>16</option><option>17</option><option>18</option></select></label><label>Home town or ZIP<input required value="Cranford, NJ"></label><label>School <span>Optional</span><select><option>Prefer not to say</option><option>Cranford High School</option><option>Union County Vocational-Technical Schools</option><option>Private school</option><option>Another school</option><option>Homeschool</option></select></label><p class="form-explainer">Town, age, availability, and travel range shape results. School does not.</p><button class="primary-btn" type="submit">Save profile</button></form></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
