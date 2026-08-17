@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cranford Connect prototype: safe local jobs for high-school students.">
+  <title>Cranford Connect — Local jobs for students</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/" id="brand-home" aria-label="Platform home"><span class="brand-mark">L</span><span>LocalLaunch <small>working name</small></span></a>
+    <nav id="platform-nav" aria-label="Platform navigation"><button class="plain-nav" data-register>For students</button><button class="plain-nav" data-enter-employer>For employers</button><button class="header-cta" data-register>Get started</button></nav>
+    <nav id="market-nav" class="hidden" aria-label="Marketplace navigation"><button class="nav-link active" data-view="jobs">Find jobs</button><button class="nav-link" data-view="applications">My applications</button><button class="nav-link" data-view="employer">For employers</button></nav>
+    <button class="avatar hidden" aria-label="Open profile">JR</button>
+  </header>
+
+  <main>
+    <section id="platform" class="view active-view platform-landing">
+      <div class="neutral-hero shell"><div class="neutral-copy"><p class="eyebrow">Your town. Your schedule. Your first job.</p><h1>Real local jobs,<br><span>built for high school.</span></h1><p class="landing-intro">A trusted place for students ages 16-18 to find verified, local part-time jobs that fit around school.</p><form id="location-form" class="location-form"><label for="town-search">Find jobs near you</label><div class="location-control"><span>⌖</span><input id="town-search" list="town-options" placeholder="Enter your town or ZIP code"><datalist id="town-options"><option value="Cranford, NJ"><option value="07016"></datalist><button class="primary-btn" type="submit">Find jobs near you</button></div><p>Prototype location: try <button type="button" class="inline-location" data-cranford>Cranford, NJ</button> or 07016.</p></form><div class="trust-strip"><span><strong>✓</strong> Verified employers</span><span><strong>✓</strong> Student-ready jobs</span><span><strong>✓</strong> 10-20 hours/week</span></div></div>
+      </div>
+      <section class="job-drop shell" aria-label="Examples of student-friendly local jobs">
+        <div class="job-drop-heading"><div><p class="eyebrow">Made for your actual schedule</p><h2>Your first job could<br><span>look like this.</span></h2></div><p>Real roles will appear after you choose an available town. These examples show what the platform is built to find.</p></div>
+        <div class="energy-tags" aria-hidden="true"><span>AFTER SCHOOL</span><span>WEEKENDS</span><span>NO EXPERIENCE</span><span>10-20 HOURS</span><span>CLOSE TO HOME</span><span>VERIFIED</span></div>
+        <div class="preview-deck">
+          <article class="preview-job preview-cafe"><div class="preview-top"><span class="preview-icon">☕</span><span class="preview-heart">♡</span></div><span class="preview-sample">Sample job - prototype only.</span><h3>Café team member</h3><div class="preview-details"><span>After school</span><strong>$16/hr</strong></div><small>✓ Verified example</small></article>
+          <article class="preview-job preview-library"><div class="preview-top"><span class="preview-icon">▤</span><span class="preview-heart">♡</span></div><span class="preview-sample">Sample job - prototype only.</span><h3>Library page</h3><div class="preview-details"><span>10-12 hrs/week</span><strong>$15.92/hr</strong></div><small>✓ Verified example</small></article>
+          <article class="preview-job preview-rec"><div class="preview-top"><span class="preview-icon">●</span><span class="preview-heart">♡</span></div><span class="preview-sample">Sample job - prototype only.</span><h3>Recreation assistant</h3><div class="preview-details"><span>Weekends</span><strong>$16.50/hr</strong></div><small>✓ Verified example</small></article>
+        </div>
+        <p class="cross-audience-line"><strong>Built for students.</strong> Clear enough for parents. Verified for everyone.</p>
+      </section>
+</section>
+<section id="jobs" class="view">
+            <div id="school-entry-banner" class="school-entry-banner hidden shell"><div><p class="eyebrow">School partner entry</p><strong>Opportunities for Cranford High School students</strong><span>You are viewing the same Cranford-area marketplace available to all eligible local students.</span></div><button class="text-btn" data-normal-town>View standard town page →</button></div><div class="local-edition-bar"><div class="shell"><button class="back-platform" data-home>← All locations</button><span>Cranford, New Jersey</span><strong>Local edition</strong></div></div>
+<div class="hero shell">
+        <div>
+          <p class="eyebrow">Cranford-area jobs · Ages 16-18</p>
+          <h1>Your first job<br><span>starts close to home.</span></h1>
+          <p class="hero-copy">Real part-time jobs from verified local employers, matched to your age and schedule—not the school you attend.</p>
+        </div>
+        <div class="hero-visual">
+          <span class="hero-town-label">Cranford, NJ</span>
+          <img src="cranford-hero.png" alt="Three high-school students near Cranford's downtown clock, river, shops, and train">
+          <aside class="safety-card">
+            <div class="shield">✓</div>
+            <div><strong>Safety comes standard</strong><span>Every employer and job is reviewed before you see it.</span></div>
+          </aside>
+        </div>
+      </div>
+
+      <div class="shell search-panel">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Search jobs, employers, or skills" aria-label="Search jobs">
+        </label>
+        <button class="filter-btn active" data-filter="all">All jobs</button>
+        <button class="filter-btn" data-filter="after-school">After school</button>
+        <button class="filter-btn" data-filter="weekend">Weekends</button>
+        <button class="filter-btn" data-filter="summer">Summer</button>
+      </div>
+
+      <div class="shell content-grid">
+        <section>
+          <div class="section-heading">
+            <div><p class="eyebrow">Within 5 miles</p><h2>Jobs that fit your week</h2></div>
+            <p><strong id="result-count">6</strong> verified openings</p>
+          </div>
+          <div id="job-list" class="job-list"></div>
+          <div id="empty-state" class="empty-state hidden"><strong>No jobs match yet.</strong><span>Try another search or schedule.</span></div>
+        </section>
+
+        <aside class="sidebar">
+          <div class="profile-card">
+            <div class="progress-label"><span>Your profile</span><strong>75%</strong></div>
+            <div class="progress"><span></span></div>
+            <h3>Stand out to local employers</h3>
+            <p>Add your availability and one skill to complete your profile.</p>
+            <button class="text-btn">Complete profile →</button>
+          </div>
+          <div class="promise-card">
+            <p class="eyebrow">Our promise</p>
+            <h3>School comes first.</h3>
+            <ul>
+              <li>Jobs limited to 10–20 hours a week</li>
+              <li>Age-appropriate duties and schedules</li>
+              <li>No public phone number or address</li>
+              <li>Simple report and block tools</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="applications" class="view shell dashboard-view">
+      <p class="eyebrow">Student dashboard</p>
+      <h1>My applications</h1>
+      <p class="page-intro">Know what happens next without chasing an employer.</p>
+      <div class="status-row">
+        <article><strong>2</strong><span>Submitted</span></article>
+        <article><strong>1</strong><span>Employer viewed</span></article>
+        <article><strong>0</strong><span>Interviews</span></article>
+      </div>
+      <div class="application-card">
+        <div class="company-logo green">BL</div>
+        <div><p class="eyebrow">Viewed yesterday</p><h3>Counter Team Member</h3><span>Brick Lane Café · 12–16 hrs/week</span></div>
+        <span class="status-pill">Under review</span>
+      </div>
+      <div class="application-card">
+        <div class="company-logo amber">CP</div>
+        <div><p class="eyebrow">Submitted Aug 15</p><h3>Recreation Assistant</h3><span>Cranford Recreation · 10–15 hrs/week</span></div>
+        <span class="status-pill neutral">Submitted</span>
+      </div>
+    </section>
+
+    <section id="employer" class="view shell dashboard-view">
+      <div class="employer-hero">
+        <div><p class="eyebrow">For local employers</p><h1>Meet dependable students nearby.</h1><p class="page-intro">Post a clear, age-appropriate role in minutes. We guide you through verification and youth-employment requirements.</p></div>
+        <button class="primary-btn" id="start-post">Post a job</button>
+      </div>
+      <div class="employer-grid">
+        <article><span>01</span><h3>Verify your organization</h3><p>Confirm the business and the person responsible for hiring.</p></article>
+        <article><span>02</span><h3>Describe the real work</h3><p>List pay, duties, equipment, supervision, hours, and location.</p></article>
+        <article><span>03</span><h3>Meet matched students</h3><p>Only receive applicants whose age and availability fit the role.</p></article>
+      </div>
+      <form id="job-form" class="job-form hidden">
+        <div class="form-heading"><div><p class="eyebrow">New job</p><h2>Create a safe, clear posting</h2></div><button type="button" class="close-form" aria-label="Close form">×</button></div>
+        <div class="form-grid">
+          <label>Job title<input required name="title" placeholder="e.g. Weekend counter team member"></label>
+          <label>Hourly pay<input required name="pay" placeholder="e.g. $16.00/hour"></label>
+          <label>Hours per week<select required name="hours"><option>10–15 hours</option><option>15–20 hours</option></select></label>
+          <label>Schedule<select required name="schedule"><option>After school</option><option>Weekends</option><option>After school + weekends</option><option>Summer</option></select></label>
+          <label class="wide">Duties<textarea required name="duties" placeholder="What will the student actually do?"></textarea></label>
+          <label class="check wide"><input required type="checkbox"> I confirm this role has no prohibited or hazardous duties for workers under 18.</label>
+        </div>
+        <div class="form-actions"><span>Listings are reviewed before publication.</span><button class="primary-btn" type="submit">Submit for review</button></div>
+      </form>
+    </section>
+  </main>
+
+  <dialog id="job-modal">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div id="modal-content"></div>
+  </dialog>
+
+  <dialog id="profile-modal" class="profile-modal"><button class="profile-close modal-close" aria-label="Close">×</button><p class="eyebrow">Student profile · prototype</p><h2>Tell us what works for you.</h2><p>School is optional and never controls which local jobs you can see.</p><form id="profile-form" class="profile-form"><label>Age<select required><option value="">Choose age</option><option>16</option><option>17</option><option>18</option></select></label><label>Home town or ZIP<input required value="Cranford, NJ"></label><label>School <span>Optional</span><select><option>Prefer not to say</option><option>Cranford High School</option><option>Union County Vocational-Technical Schools</option><option>Private school</option><option>Another school</option><option>Homeschool</option></select></label><p class="form-explainer">Town, age, availability, and travel range shape results. School does not.</p><button class="primary-btn" type="submit">Save profile</button></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
