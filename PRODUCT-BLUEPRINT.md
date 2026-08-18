@@ -116,6 +116,19 @@ Initial success targets:
 - At least 10 successful hires during the pilot
 - Zero unresolved high-severity safety reports
 
+## Evidence-based employer discovery
+
+A business is not labeled as an employer to watch merely because its category seems plausible. A named employer enters the hiring pipeline only with a dated signal: a current official opening, a current attributable third-party posting, an active application page, a documented recurring seasonal process, or a checked community-submitted sign or social post.
+
+Cranford pilot priorities based on observed signals:
+
+1. Grocery and retail — strongest potential for multiple standardized part-time roles.
+2. Youth programs and aquatics — schedules often align with school calendars; certification may apply.
+3. Quick-service food and desserts — repeated age-16+ postings; equipment duties require review.
+4. Senior-living dining — local part-time openings exist, but minimum age requires role-level confirmation.
+5. Municipal seasonal work — documented recurring hiring, shown as seasonal when the current cycle is closed.
+
+Independent restaurants, bakeries, theaters, pizza shops and service stations remain research targets, not promoted leads, until a dated hiring signal is found. Public-source leads remain distinct from employer-verified jobs.
 ## Product policy
 
 - Listings must offer 10–20 hours per week.
