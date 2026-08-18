@@ -10,10 +10,10 @@ Platform -> Town -> Local jobs
 The Cranford pilot is:
 
 ```
-Platform -> Cranford, New Jersey -> Cranford-area jobs
+Platform -> Cranford, New Jersey search center -> jobs within 5 miles
 ```
 
-Jobs belong to a local marketplace, not an individual school. Eligibility and discovery use age, town or ZIP code, travel radius, availability, transportation, and role requirements. School enrollment never determines which jobs a student can see.
+Jobs belong to one shared inventory, not to a town page or an individual school. A town selection supplies the search center and default radius. Eligibility and discovery use job coordinates, distance from that center, age, availability, transportation, and role requirements. School enrollment never determines which jobs a student can see.
 
 This structure includes students at the local public high school, private and vocational schools, schools in another town, homeschool students, and students who live near Cranford.
 
@@ -28,6 +28,18 @@ The default entry page is geographically neutral. It explains within 10-15 secon
 
 In the prototype, Cranford, NJ and ZIP code 07016 route to the Cranford local marketplace.
 
+
+## Town search centers and shared-radius discovery
+
+A town is an entry point and geographic search center, not a municipal job boundary. For the Cranford pilot, selecting Cranford applies a default five-mile radius around the Cranford center and returns qualifying jobs from the shared job inventory. Results may therefore include Cranford, Garwood, Clark, Westfield, and other nearby addresses when they fall within the radius; no additional town marketplace is activated in the prototype.
+
+Conceptual query:
+
+`selected town center + radius + student eligibility filters -> shared job inventory`
+
+Each job is stored once with its actual address/town and coordinates. Distance is calculated for the current town view. The same job may appear in future `/cranford`, `/westfield`, or `/clark` views when it falls within each center's radius, but those views reference the same job ID rather than copying the record.
+
+Current prototype radius: 5 miles. The interface anticipates future 2-mile, 5-mile, and 10-mile choices, with 5 miles remaining the only active/default option for now.
 ## One platform brand plus local town editions
 
 The platform brand, typography, navigation, safety controls, data model, and user experience remain consistent. A town edition may change its town name, coverage radius, local jobs, local employment guidance, and original landmark-inspired illustration.
@@ -43,7 +55,7 @@ Conceptual routes:
 - `/cranford` - the standard Cranford marketplace
 - `/schools/cranford-high` - a Cranford High School partner entry page
 
-Both routes use the same Cranford-area jobs. A school page may add partner copy or career-office resources, but it must not duplicate, isolate, or own the job inventory.
+Both routes use the same jobs-within-5-miles result set centered on Cranford. A school page may add partner copy or career-office resources, but it must not duplicate, isolate, or own the job inventory.
 
 Recommended relationships:
 
@@ -72,7 +84,7 @@ School data must not restrict marketplace access. Any future school reporting re
 - `marketplaces`: town, state, ZIP coverage, service radius, status, local visual configuration
 - `schools`: name, type, location, verification status
 - `school_entry_pages`: school_id, marketplace_id, slug, partner copy, status
-- `jobs.marketplace_id`: the local marketplace that owns discovery for the role
+- `jobs`: one canonical record per opening, including actual town, latitude/longitude, source, status, and job requirements`r`n- Town views calculate distance from the selected town center at query time; they do not own or duplicate jobs
 - `student_profiles.school_id`: nullable and never an eligibility key
 
 There is one shared jobs table. Town pages and school entry pages are filtered views over shared inventory, not separate databases.

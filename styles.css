@@ -69,3 +69,7 @@
 @media(max-width:580px){.watch-heading{display:block}.directory-link{display:inline-block;margin-top:12px}.watch-grid article{grid-template-columns:40px 1fr}.watch-grid>a{grid-column:2}.hiring-tip{grid-template-columns:1fr;margin-inline:16px}.hiring-tip .primary-btn{grid-column:1}.tip-art{display:none}.delivery-note{margin-inline:16px}.employer-watch{padding-inline:16px}}
 
 .empty-applications{margin-top:36px;padding:62px 24px;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:22px}.empty-applications>div{font-size:38px;color:#d34e62}.empty-applications h2{font:800 26px Manrope;margin:8px 0}.empty-applications p{color:var(--muted);margin:0 0 20px}
+
+/* Town-centered radius search */
+.job-location{color:var(--ink);font-size:12px}.radius-control{display:flex;align-items:center;gap:7px;margin:-3px 0 17px;padding:9px 11px;border:1px solid var(--line);border-radius:13px;background:rgba(255,253,250,.65)}.radius-control>span{font-size:11px;font-weight:800;color:var(--muted);margin-right:2px}.radius-control button{border:1px solid var(--line);border-radius:999px;background:var(--paper);color:#9aa29e;padding:5px 10px;font-size:10px;font-weight:800}.radius-control button.active{background:var(--green);border-color:var(--green);color:white}.radius-control small{margin-left:auto;color:var(--muted);font-size:10px}
+@media(max-width:580px){.radius-control{flex-wrap:wrap}.radius-control small{width:100%;margin-left:0}}
