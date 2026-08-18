@@ -99,9 +99,9 @@ There is one shared jobs table. Town pages and school entry pages are filtered v
 - School comes first
 - Town-specific Cranford editorial illustration
 
- Cranford Connect — MVP product blueprint
+ HighSchoolHire — MVP product blueprint
 
-Working name for a safety-first, hyperlocal job marketplace serving Cranford, New Jersey high-school students ages 16–18.
+HighSchoolHire is a safety-first, hyperlocal job marketplace serving high-school students. Cranford, New Jersey is the initial pilot search center for students ages 16–18.
 
 ## Pilot objective
 
@@ -262,7 +262,7 @@ The pilot should remain free. Revenue experiments should wait until supply, trus
 
 ## Decisions needed after prototype review
 
-- Final brand name and domain
+- Final domain and trademark review for HighSchoolHire
 - Exact Cranford-area radius
 - Whether 18-year-old students receive the same platform schedule limit
 - Guardian notification or consent policy for 16- and 17-year-olds
